@@ -1,0 +1,76 @@
+#clockContainer {
+    position: relative;
+    margin: auto;
+    height: 40vw;
+    width: 40vw;
+    background: url(pngClock.com.png) no-repeat center/cover;
+    border: 2px solid #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+  }
+  
+  #hour,
+  #minute,
+  #second {
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+  }
+  
+  #hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 50%;
+    background: #333;
+    opacity: 0.8;
+  }
+  
+  #minute {
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 50%;
+    background: #555;
+    opacity: 0.8;
+  }
+  
+  #second {
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 50%;
+    background: #ff5252; /* Bright red color */
+  
+    animation: tick 60s linear infinite; /* Adding animation for the second hand */
+  }
+  
+  /* Animation keyframes for smooth ticking motion */
+  @keyframes tick {
+    0% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
+
+  .hand {
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+    top: 19%;
+    left: 50%;
+
+    width: 1%;
+    height: 40%;
+    background: #333;
+   
+ 
+    cursor: pointer;
+
+    user-select: none;
+   
+  }
